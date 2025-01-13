@@ -9,7 +9,7 @@ for file in *; do
         filename_no_extension="${filename%.*}"
 
         # Convertir la imagen de .webp a .png usando ImageMagick
-        convert "$file" "$filename_no_extension.png"
+        magick convert "$file" "$filename_no_extension.png"
 
         # Verificar si la conversión fue exitosa antes de borrar el archivo original
         if [ $? -eq 0 ]; then
